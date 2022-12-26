@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.teal,
           body: SafeArea(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const CircleAvatar(
                   radius: 50.0,
@@ -36,56 +37,50 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold
                   ),
                 ),
-                Container(
-                  color: Colors.white,
+                SizedBox(
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(
+                    color: Colors.teal.shade300,
+                  ),
+                ),
+                Card(
                   margin: EdgeInsets.symmetric(
                     vertical: 10.0,
                     horizontal: 25.0
                   ),
-                  padding: EdgeInsets.all(10.0),
-                  child: Row(
-                    children: const [
-                      Icon(
-                        Icons.phone,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        '+91 9102768539',
-                        style: TextStyle(
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      '+91 9102768539',
+                      style: TextStyle(
                           fontSize: 20.0,
                           fontFamily: 'Source Sans Pro'
-                        ),
-                      )
-                    ],
-                  ),
+                      ),
+                    )
+                  )
                 ),
-                Container(
+                Card(
                   color: Colors.white,
-                  padding: const EdgeInsets.all(10),
                   margin: const EdgeInsets.symmetric(
                     vertical: 10.0,
                     horizontal: 25.0
                   ),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.email,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        'harsh@onepercentstartups.com',
-                        style: TextStyle(
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      'harsh@onepercentstartups.com',
+                      style: TextStyle(
                           color: Colors.teal.shade900,
                           fontFamily: 'Source Sans Pro'
-                        ),
-                      )
-                    ],
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -95,4 +90,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
