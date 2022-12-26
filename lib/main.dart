@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
                   ),
                   padding: EdgeInsets.all(10.0),
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         Icons.phone,
                         color: Colors.teal,
@@ -64,8 +64,8 @@ class MyApp extends StatelessWidget {
                 ),
                 Container(
                   color: Colors.white,
-                  padding: EdgeInsets.all(10),
-                  margin: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.symmetric(
                     vertical: 10.0,
                     horizontal: 25.0
                   ),
